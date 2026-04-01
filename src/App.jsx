@@ -12,6 +12,8 @@ import MarketingPerformance from './pages/MarketingPerformance'
 import PartnershipsOutreach from './pages/PartnershipsOutreach'
 import StudentOutcomes from './pages/StudentOutcomes'
 import Settings from './pages/Settings'
+import MultiCampusOverview from './pages/MultiCampusOverview'
+import ExpansionTimeline from './pages/ExpansionTimeline'
 
 export default function App() {
   return (
@@ -28,6 +30,8 @@ export default function App() {
         <Route path="marketing" element={<MarketingPerformance />} />
         <Route path="partnerships" element={<PartnershipsOutreach />} />
         <Route path="outcomes" element={<StudentOutcomes />} />
+        <Route path="multi-campus" element={<MultiCampusOverview />} />
+        <Route path="expansion" element={<ExpansionTimeline />} />
         <Route path="settings" element={<Settings />} />
       </Route>
     </Routes>

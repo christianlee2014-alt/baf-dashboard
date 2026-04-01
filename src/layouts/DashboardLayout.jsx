@@ -3,7 +3,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom'
 import {
   LayoutDashboard, DollarSign, TrendingUp, GraduationCap,
   Users, Brain, BookOpen, Globe, Megaphone, Handshake,
-  Target, Settings, ChevronLeft, ChevronRight, Menu, X, Flower2
+  Target, Settings, ChevronLeft, ChevronRight, Menu, X, Flower2, Building2, Calendar
 } from 'lucide-react'
 
 const navItems = [
@@ -18,6 +18,8 @@ const navItems = [
   { to: '/marketing', icon: Megaphone, label: 'Marketing Performance', section: 'Operations' },
   { to: '/partnerships', icon: Handshake, label: 'Partnerships & Outreach', section: 'Operations' },
   { to: '/outcomes', icon: Target, label: 'Student Outcomes', section: 'Operations' },
+  { to: '/multi-campus', icon: Building2, label: 'Multi-Campus Overview', section: 'Expansion' },
+  { to: '/expansion', icon: Calendar, label: 'Expansion Timeline', section: 'Expansion' },
   { to: '/settings', icon: Settings, label: 'Settings / About', section: null },
 ]
 

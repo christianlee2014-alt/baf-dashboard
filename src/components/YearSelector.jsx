@@ -1,9 +1,10 @@
 import { YEARS } from '../data/financialData'
 
-export default function YearSelector({ selected, onChange }) {
+export default function YearSelector({ selected, onChange, years: customYears }) {
+  const yearList = customYears || YEARS
   return (
     <div className="flex items-center gap-1 bg-bg-card border border-bg-border rounded-lg p-1">
-      {YEARS.map(y => (
+      {yearList.map(y => (
         <button
           key={y}
           onClick={() => onChange(y)}
