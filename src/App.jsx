@@ -14,6 +14,8 @@ import StudentOutcomes from './pages/StudentOutcomes'
 import Settings from './pages/Settings'
 import MultiCampusOverview from './pages/MultiCampusOverview'
 import ExpansionTimeline from './pages/ExpansionTimeline'
+import StartupCosts from './pages/StartupCosts'
+import LiveData from './pages/LiveData'
 
 export default function App() {
   return (
@@ -32,6 +34,8 @@ export default function App() {
         <Route path="outcomes" element={<StudentOutcomes />} />
         <Route path="multi-campus" element={<MultiCampusOverview />} />
         <Route path="expansion" element={<ExpansionTimeline />} />
+        <Route path="startup-costs" element={<StartupCosts />} />
+        <Route path="live-data" element={<LiveData />} />
         <Route path="settings" element={<Settings />} />
       </Route>
     </Routes>
