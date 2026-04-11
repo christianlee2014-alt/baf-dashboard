@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blooming Academies Foundation | Where Every Student is a SEED</title>
+  <meta name="description" content="Explore Blooming Academies Foundation schools, student support services, campus plans, partnerships, and the mission behind BAF's Florida education network.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d1420;
+      --ink-deep: #091019;
+      --ink-soft: #131f31;
+      --surface: #101a29;
+      --surface-2: #162336;
+      --line: rgba(255,255,255,0.1);
+      --text: #f5f1e8;
+      --muted: #aab3c4;
+      --gold: #2e8b57;
+      --gold-bright: #3cb371;
+      --emerald: #62c59a;
+      --blue: #6ea4e7;
+      --green-deep: #1a6b3c;
+      --green-light: #7ecfa0;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --container: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(46,139,87,0.18), transparent 25%),
+        radial-gradient(circle at 85% 20%, rgba(110,164,231,0.14), transparent 22%),
+        linear-gradient(180deg, #0a1018 0%, #0c1521 45%, #081019 100%);
+      color: var(--text);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.25), transparent 80%);
+      opacity: 0.25;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--container), calc(100% - 40px)); margin: 0 auto; }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: rgba(9, 16, 25, 0.78);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .topbar-items,
+    .topbar-right,
+    .nav-links,
+    .hero-actions,
+    .hero-proof,
+    .impact-grid,
+    .campus-grid,
+    .model-grid,
+    .outcomes-grid,
+    .partners-grid,
+    .path-grid,
+    .footer-grid { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .topbar-chip {
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(10, 16, 24, 0.76);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(62,179,113,0.3);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+      overflow: hidden;
+      padding: 4px;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 14px;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy small {
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+      box-shadow: 0 16px 40px rgba(46,139,87,0.28);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .hero {
+      padding: 84px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: 10px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(46,139,87,0.2), transparent 66%);
+      filter: blur(8px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(46,139,87,0.3);
+      background: rgba(46,139,87,0.1);
+      color: var(--gold-bright);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      line-height: 1.06;
+    }
+
+    h1 {
+      margin-top: 22px;
+      font-size: clamp(42px, 6vw, 78px);
+      max-width: 760px;
+    }
+
+    .hero-copy p {
+      margin: 22px 0 0;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-actions { margin-top: 30px; }
+
+    .hero-proof {
+      margin-top: 34px;
+      gap: 18px;
+    }
+
+    .proof-card {
+      min-width: 170px;
+      padding: 18px 18px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .proof-card strong {
+      display: block;
+      font-size: 26px;
+      color: var(--gold-bright);
+      text-shadow: 0 0 18px rgba(46,139,87,0.2);
+    }
+
+    .proof-card span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-panel,
+    .panel,
+    .campus-card,
+    .partner-card,
+    .path-card,
+    .testimonial,
+    .impact-card,
+    .model-card,
+    .outcome-card {
+      background: linear-gradient(180deg, rgba(20,31,47,0.94), rgba(13,21,33,0.98));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel {
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), transparent 35%);
+      pointer-events: none;
+    }
+
+    .panel-kicker {
+      font-size: 12px;
+      color: var(--gold-bright);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .hero-panel h3 {
+      margin-top: 12px;
+      font-size: 34px;
+    }
+
+    .hero-panel p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .school-list {
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .school-list-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .school-list-item strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .school-list-item span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .section { padding: 42px 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .section-head p {
+      margin: 10px 0 0;
+      max-width: 720px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 52px);
+    }
+
+    .impact-grid,
+    .model-grid,
+    .outcomes-grid,
+    .partners-grid,
+    .path-grid,
+    .footer-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .impact-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .campus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .model-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .outcomes-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .partners-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .path-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .footer-grid { grid-template-columns: 1.15fr 0.85fr 0.85fr 1fr; }
+
+    .impact-card,
+    .model-card,
+    .outcome-card,
+    .partner-card,
+    .path-card {
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .impact-card::before,
+    .campus-card::before,
+    .model-card::before,
+    .outcome-card::before,
+    .partner-card::before,
+    .path-card::before,
+    .testimonial::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      pointer-events: none;
+    }
+
+    .impact-card strong {
+      display: block;
+      font-size: 42px;
+      color: var(--gold-bright);
+      text-shadow: 0 0 22px rgba(46,139,87,0.18);
+    }
+
+    .impact-card h3,
+    .model-card h3,
+    .partner-card h3,
+    .path-card h3,
+    .campus-card h3 { font-size: 24px; }
+
+    .impact-card p,
+    .model-card p,
+    .outcome-card p,
+    .partner-card p,
+    .path-card p,
+    .campus-card p,
+    .footer-column p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .network-band {
+      margin: 8px 0 0;
+      padding: 18px 22px;
+      border-radius: 18px;
+      background: linear-gradient(90deg, rgba(46,139,87,0.16), rgba(255,255,255,0.03));
+      border: 1px solid rgba(46,139,87,0.22);
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .campus-card {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-height: 100%;
+    }
+
+    .campus-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .campus-pill,
+    .tiny-pill,
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .campus-pill {
+      padding: 8px 12px;
+      background: rgba(46,139,87,0.14);
+      color: var(--gold-bright);
+      border: 1px solid rgba(46,139,87,0.28);
+    }
+
+    .campus-pill.planned {
+      background: rgba(110,164,231,0.12);
+      color: var(--blue);
+      border-color: rgba(110,164,231,0.22);
+    }
+
+    .campus-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .meta-pill {
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: var(--muted);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+
+    .campus-copy {
+      display: grid;
+      gap: 10px;
+    }
+
+    .campus-features,
+    .partner-list,
+    .footer-links,
+    .campus-links {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .campus-features li,
+    .partner-list li,
+    .footer-links a {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .campus-features li::before,
+    .partner-list li::before {
+      content: "•";
+      color: var(--gold-bright);
+      margin-right: 10px;
+    }
+
+    .campus-links a {
+      font-weight: 700;
+      color: var(--gold-bright);
+      font-size: 14px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .timeline-item strong {
+      color: var(--gold-bright);
+      font-size: 20px;
+    }
+
+    .testimonial-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .testimonial {
+      padding: 24px;
+      position: relative;
+    }
+
+    .testimonial p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .testimonial footer {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(46,139,87,0.28), rgba(255,255,255,0.05));
+      border: 1px solid rgba(46,139,87,0.28);
+      color: var(--gold-bright);
+      font-weight: 800;
+    }
+
+    .cta-band {
+      margin-top: 14px;
+      padding: 34px;
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(46,139,87,0.2), rgba(98,197,154,0.08) 48%, rgba(255,255,255,0.03) 100%),
+        rgba(12,18,28,0.92);
+      border: 1px solid rgba(46,139,87,0.22);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .cta-band p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      max-width: 760px;
+      line-height: 1.7;
+    }
+
+    footer.site-footer {
+      padding: 70px 0 36px;
+      margin-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(8,14,22,0.2), rgba(7,12,19,0.78));
+    }
+
+    .footer-column h4 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a { display: block; margin-bottom: 10px; }
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-bottom {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .floating-cta {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 25;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(46,139,87,0.32);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .campus-grid,
+      .impact-grid,
+      .model-grid,
+      .outcomes-grid,
+      .partners-grid,
+      .testimonial-row,
+      .path-grid,
+      .footer-grid,
+      .cta-band {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-grid { grid-template-columns: 1fr; }
+      .cta-band { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .topbar { display: none; }
+      .nav-inner { min-height: 72px; }
+      .nav-links { display: none; }
+      .impact-grid,
+      .campus-grid,
+      .model-grid,
+      .outcomes-grid,
+      .partners-grid,
+      .testimonial-row,
+      .path-grid,
+      .footer-grid,
+      .hero-proof { grid-template-columns: 1fr; display: grid; }
+      .section { padding: 34px 0; }
+      .timeline-item { grid-template-columns: 1fr; }
+      .btn { width: 100%; }
+      .hero-actions { display: grid; }
+      .floating-cta { left: 14px; right: 14px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-items">
+        <span class="topbar-chip">Florida school network</span>
+        <span class="topbar-chip">Student-centered support model</span>
+        <span class="topbar-chip">Charter and expansion-ready campuses</span>
+      </div>
+      <div class="topbar-right">
+        <span>Blooming Academies Foundation</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <div class="brand-mark"><img src="baf-logo.jpg" alt="Blooming Academies Foundation logo"></div>
+        <div class="brand-copy">
+          <strong>Blooming Academies Foundation</strong>
+          <small>"Where every student is a SEED"</small>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#schools">Schools</a>
+        <a href="#model">Programs</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#partners">Partnerships</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-primary" href="#contact">Connect With BAF</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">School Network Overview</div>
+        <h1>Where academic recovery, clinical support, and college-prep pathways come together.</h1>
+        <p>
+          Blooming Academies Foundation is building a Florida-based network of student-centered schools designed to serve families with rigor, structure, and wraparound support. BAF combines core academics, clinical services, special populations support, and community partnerships to create campuses where students can stabilize, grow, and graduate with momentum.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#schools">Explore Our Schools</a>
+          <a class="btn btn-secondary" href="#model">View Student Support Model</a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-card">
+            <strong>3</strong>
+            <span>Florida campuses in the current network plan</span>
+          </div>
+          <div class="proof-card">
+            <strong>8+</strong>
+            <span>Core services spanning academics, clinical care, ESOL, SPED, CTE, transportation, and more</span>
+          </div>
+          <div class="proof-card">
+            <strong>50</strong>
+            <span>Students in the initial Palm Beach operating model, with expansion planned beyond FY27</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div style="text-align:center; margin-bottom:18px;">
+          <img src="baf-logo.jpg" alt="Blooming Academies Foundation" style="width:140px; height:140px; object-fit:contain; margin:0 auto; border-radius:24px; filter:drop-shadow(0 8px 24px rgba(46,139,87,0.3));">
+          <p style="margin:12px 0 0; font-size:14px; font-weight:700; color:var(--gold-bright); letter-spacing:0.06em;">"Where every student is a SEED"</p>
+        </div>
+        <div class="panel-kicker">Current Network Snapshot</div>
+        <h3>From Palm Beach to a broader Florida footprint.</h3>
+        <p>
+          BAF is positioned as a school network with one active Palm Beach launch model and planned growth into Broward and Tampa. Each location is structured around student support, operational consistency, and community-aligned expansion.
+        </p>
+        <div class="school-list">
+          <div class="school-list-item">
+            <strong>Palm Beach (BAF)</strong>
+            <span>Operating model based in Palm Beach County with integrated academics, therapy support, speech services, ESOL, and career-focused programming.</span>
+          </div>
+          <div class="school-list-item">
+            <strong>Broward Campus</strong>
+            <span>Planned Florida campus designed to extend the BAF model into Broward County with a larger student base and the same support-forward structure.</span>
+          </div>
+          <div class="school-list-item">
+            <strong>Tampa Campus</strong>
+            <span>Planned Tampa expansion intended to broaden regional impact and establish another campus under the same academic and student-services framework.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="network-band">
+        Blooming Academies Foundation operates with a mission-first approach: deliver strong academics, remove barriers to participation, and embed the services students need to stay engaged, supported, and on a path toward long-term success.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="impact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Why The Model Matters</div>
+          <h2>A school network built around access, support, and measurable student progress.</h2>
+          <p>
+            The BAF model is designed for students who need more than a standard classroom experience. That means combining academics with clinical intervention, community-informed support, operational discipline, and a campus experience that can adapt to real family needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="impact-grid">
+        <div class="impact-card">
+          <strong>Core</strong>
+          <h3>Academic focus</h3>
+          <p>ELA, math, science, and social studies remain the instructional spine, with support systems layered around student growth rather than separated from it.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Integrated</strong>
+          <h3>Clinical support</h3>
+          <p>Therapy, speech, and specialized student services are treated as part of the learning environment, not an afterthought.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Flexible</strong>
+          <h3>Family-centered access</h3>
+          <p>Transportation support, food service, and targeted interventions help reduce friction for students and families.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Scalable</strong>
+          <h3>Expansion-ready model</h3>
+          <p>The same operational and service framework can be extended from Palm Beach into Broward, Tampa, and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="schools">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Our Schools</div>
+          <h2>Explore the BAF campus network.</h2>
+          <p>
+            Inspired by the clarity of a school finder, this section gives each campus its own positioning, status, and overview. Palm Beach reflects the current operating model. Broward and Tampa represent the next wave of network growth.
+          </p>
+        </div>
+      </div>
+
+      <div class="campus-grid">
+        <article class="campus-card" id="palm-beach">
+          <div class="campus-top">
+            <div>
+              <div class="eyebrow">Campus 01</div>
+              <h3>Palm Beach (BAF)</h3>
+            </div>
+            <span class="campus-pill">Operating</span>
+          </div>
+          <div class="campus-meta">
+            <span class="meta-pill">Palm Beach County, FL</span>
+            <span class="meta-pill">Initial launch year: FY27</span>
+            <span class="meta-pill">Foundational campus</span>
+          </div>
+          <div class="campus-copy">
+            <p>
+              Palm Beach is the lead BAF campus model and serves as the blueprint for the broader network. It combines college-preparatory academics with embedded clinical support, speech therapy access, ESOL services, special education support, and career-aligned programming.
+            </p>
+          </div>
+          <ul class="campus-features">
+            <li>Core academics in ELA, math, science, and social studies</li>
+            <li>Integrated therapy and speech support</li>
+            <li>ESL / ESOL and special education services</li>
+            <li>Career and technical education pathways</li>
+            <li>Transportation support through bus passes</li>
+            <li>Food service and student event programming</li>
+          </ul>
+          <div class="campus-links">
+            <a href="#model">See the Palm Beach support model</a>
+          </div>
+        </article>
+
+        <article class="campus-card" id="broward">
+          <div class="campus-top">
+            <div>
+              <div class="eyebrow">Campus 02</div>
+              <h3>Broward Campus</h3>
+            </div>
+            <span class="campus-pill planned">Planned</span>
+          </div>
+          <div class="campus-meta">
+            <span class="meta-pill">Broward County, FL</span>
+            <span class="meta-pill">Planned start: FY28</span>
+            <span class="meta-pill">Expansion campus</span>
+          </div>
+          <div class="campus-copy">
+            <p>
+              Broward is positioned as the next major BAF expansion site. The campus is planned to extend the same student-support architecture used in Palm Beach while growing the network's reach into another high-need Florida market.
+            </p>
+          </div>
+          <ul class="campus-features">
+            <li>Built on the same integrated academics + support framework</li>
+            <li>Designed for larger enrollment growth after launch</li>
+            <li>Opportunity to deepen local partnerships and referral pathways</li>
+            <li>Supports BAF's long-term regional presence in South Florida</li>
+          </ul>
+          <div class="campus-links">
+            <a href="#timeline">View the BAF growth path</a>
+          </div>
+        </article>
+
+        <article class="campus-card" id="tampa">
+          <div class="campus-top">
+            <div>
+              <div class="eyebrow">Campus 03</div>
+              <h3>Tampa Campus</h3>
+            </div>
+            <span class="campus-pill planned">Planned</span>
+          </div>
+          <div class="campus-meta">
+            <span class="meta-pill">Tampa, FL</span>
+            <span class="meta-pill">Planned start: FY29</span>
+            <span class="meta-pill">Growth market campus</span>
+          </div>
+          <div class="campus-copy">
+            <p>
+              Tampa represents the network's move into a new regional market. The plan is to bring the BAF instructional and support model into another urban Florida community while preserving consistency in service delivery and family experience.
+            </p>
+          </div>
+          <ul class="campus-features">
+            <li>Continuation of the BAF expansion model beyond Palm Beach and Broward</li>
+            <li>Structured for long-range enrollment growth</li>
+            <li>Opportunity for stronger workforce, dual-enrollment, and community partnerships</li>
+            <li>Designed to keep mission alignment while scaling operations</li>
+          </ul>
+          <div class="campus-links">
+            <a href="#partners">See partnership opportunities</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="model">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Programs & Services</div>
+          <h2>The BAF student support model.</h2>
+          <p>
+            The most useful parts of the dashboard for a public-facing website are not the numbers. It's the structure: what students receive, how the schools are organized, and why the support model is differentiated.
+          </p>
+        </div>
+      </div>
+
+      <div class="model-grid">
+        <div class="model-card">
+          <h3>Core Academics</h3>
+          <p>College-preparatory instruction in ELA, math, science, and social studies, built to keep academic progress central.</p>
+        </div>
+        <div class="model-card">
+          <h3>Specialized Support</h3>
+          <p>Special education and IEP services, speech support, and services tailored to students who need additional intervention.</p>
+        </div>
+        <div class="model-card">
+          <h3>Clinical Services</h3>
+          <p>Therapy-informed support and clinical coordination designed to strengthen student stability, family engagement, and school readiness.</p>
+        </div>
+        <div class="model-card">
+          <h3>Career Readiness</h3>
+          <p>Career and technical education pathways that help students connect school performance to real future opportunities.</p>
+        </div>
+      </div>
+
+      <div class="model-grid" style="margin-top:18px;">
+        <div class="model-card">
+          <h3>ESL / ESOL</h3>
+          <p>Language support services designed to help multilingual learners access instruction and progress confidently.</p>
+        </div>
+        <div class="model-card">
+          <h3>Transportation Access</h3>
+          <p>Transportation support, including bus passes, to reduce attendance barriers and improve consistency.</p>
+        </div>
+        <div class="model-card">
+          <h3>Food Service</h3>
+          <p>Student food-service support that contributes to a more stable and school-ready environment.</p>
+        </div>
+        <div class="model-card">
+          <h3>Operational Backbone</h3>
+          <p>Management and administration systems that help maintain compliance, staffing, onboarding, and consistency across campuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="timeline">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Network Growth</div>
+          <h2>A phased Florida expansion path.</h2>
+          <p>
+            BAF's site should show momentum. Not finance tables. Momentum. This timeline frames how the network grows from one flagship campus into a broader multi-campus platform.
+          </p>
+        </div>
+      </div>
+
+      <div class="panel" style="padding: 24px;">
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>FY27</strong>
+            <div>
+              <h3>Palm Beach launch model</h3>
+              <p>Palm Beach anchors the network with a support-rich academic environment and establishes the operating playbook for future campuses.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <strong>FY28</strong>
+            <div>
+              <h3>Broward expansion</h3>
+              <p>Broward extends the BAF presence deeper into South Florida and positions the organization for broader student reach.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <strong>FY29</strong>
+            <div>
+              <h3>Tampa growth market</h3>
+              <p>Tampa brings the network into another major Florida region and helps transform BAF from a single-campus operator into a durable multi-campus platform.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="outcomes">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Student Outcomes</div>
+          <h2>What success is expected to look like.</h2>
+          <p>
+            The dashboard already outlined the right public-facing themes: academic growth, retention, attendance, parent satisfaction, and clinical progress. Here they’re translated into website language families and partners can understand.
+          </p>
+        </div>
+      </div>
+
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <h3>Academic Growth</h3>
+          <p>BAF aims to build year-over-year gains in ELA, math, science, GPA, and the percentage of students performing at or above grade level.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Retention & Attendance</h3>
+          <p>The model targets strong student retention, consistent daily attendance, lower absenteeism, and a more stable educational experience.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Clinical Progress</h3>
+          <p>Clinical service delivery is intended to support behavioral improvement, IEP goal progress, and stronger day-to-day functioning for students who need it.</p>
+        </div>
+      </div>
+
+      <div class="outcomes-grid" style="margin-top:18px;">
+        <div class="outcome-card">
+          <h3>Family Satisfaction</h3>
+          <p>Quarterly feedback and parent satisfaction are expected to be central indicators of whether the schools are meeting family needs well.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Student Engagement</h3>
+          <p>Events, support touchpoints, and consistent service delivery are designed to improve school connection and follow-through.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Long-Term Readiness</h3>
+          <p>The ultimate goal is not just short-term stabilization, but stronger readiness for graduation, postsecondary pathways, and workforce participation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Voices Around The Work</div>
+          <h2>The kind of impact story this model is built to generate.</h2>
+          <p>
+            The reference site leaned heavily on trust and stakeholder validation. Since we are not inventing direct BAF quotes, this section uses grounded stakeholder-style language aligned with the mission and current partnership framework.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-row">
+        <article class="testimonial">
+          <p>“Schools like this matter because students often need more than instruction alone. When academic support and care systems move together, student persistence gets stronger.”</p>
+          <footer>
+            <div class="avatar">ED</div>
+            <div>
+              <strong>Education Partner Perspective</strong><br>
+              <span style="color: var(--muted); font-size: 13px;">District / authorizer-aligned lens</span>
+            </div>
+          </footer>
+        </article>
+        <article class="testimonial">
+          <p>“A network model works best when it can bring consistency across locations while still responding to the realities of the communities it serves. That is where BAF has real leverage.”</p>
+          <footer>
+            <div class="avatar">CP</div>
+            <div>
+              <strong>Community Partner Perspective</strong><br>
+              <span style="color: var(--muted); font-size: 13px;">Expansion and outreach lens</span>
+            </div>
+          </footer>
+        </article>
+        <article class="testimonial">
+          <p>“Families are looking for schools that do not force them to choose between academics and support. The strongest model is one that respects both.”</p>
+          <footer>
+            <div class="avatar">FS</div>
+            <div>
+              <strong>Family Support Perspective</strong><br>
+              <span style="color: var(--muted); font-size: 13px;">Student-services lens</span>
+            </div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="partners">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Partnerships</div>
+          <h2>Built with operational, district, and community alignment.</h2>
+          <p>
+            BAF already has the bones of a strong partnership story. The dashboard pointed to management, district, county, and grant relationships. For a website, the right framing is credibility, ecosystem alignment, and future collaboration.
+          </p>
+        </div>
+      </div>
+
+      <div class="partners-grid">
+        <div class="partner-card">
+          <h3>Royal Global Management Services</h3>
+          <p>Operational and management support across administration, oversight, accountability, payroll, and HR functions.</p>
+        </div>
+        <div class="partner-card">
+          <h3>Palm Beach County School District</h3>
+          <p>District alignment and charter-authorizer relationship that supports the current Palm Beach campus model.</p>
+        </div>
+        <div class="partner-card">
+          <h3>Palm Beach County</h3>
+          <p>Community-level support aligned with the broader mission of creating meaningful access points for students and families.</p>
+        </div>
+        <div class="partner-card">
+          <h3>Google Grant Support</h3>
+          <p>Early grant support that signals external confidence in the BAF growth model and its long-term potential.</p>
+        </div>
+      </div>
+
+      <div class="panel" style="padding: 24px; margin-top: 18px;">
+        <h3 style="font-size: 30px; margin-bottom: 12px;">Future collaboration lanes</h3>
+        <ul class="partner-list">
+          <li>Healthcare and clinical referral relationships</li>
+          <li>Dual-enrollment and postsecondary pathways</li>
+          <li>Local business and scholarship sponsorships</li>
+          <li>Community foundation and grant partnerships</li>
+          <li>Workforce, mentoring, and transition support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">How Families Engage</div>
+          <h2>Simple paths into the BAF network.</h2>
+          <p>
+            This mirrors the strongest conversion logic from the reference site: make it obvious what families, partners, and supporters should do next.
+          </p>
+        </div>
+      </div>
+
+      <div class="path-grid">
+        <div class="path-card">
+          <h3>Find a campus</h3>
+          <p>Review the Palm Beach, Broward, and Tampa profiles to understand current and planned BAF locations.</p>
+        </div>
+        <div class="path-card">
+          <h3>Understand the model</h3>
+          <p>Explore how academics, clinical services, ESOL, SPED, transportation, and family support fit together.</p>
+        </div>
+        <div class="path-card">
+          <h3>Start a conversation</h3>
+          <p>Connect with BAF regarding enrollment interest, partnership discussions, expansion questions, or community collaboration.</p>
+        </div>
+      </div>
+
+      <div class="cta-band" id="contact">
+        <div>
+          <div class="eyebrow">Next Step</div>
+          <h2 style="font-size: clamp(30px, 4vw, 54px); margin-top: 12px;">Bring the BAF school network story to life.</h2>
+          <p>
+            This site is positioned to function as a public-facing school network overview for Blooming Academies Foundation. It gives families, supporters, partners, and prospective collaborators a clear picture of the campuses, model, outcomes focus, and future direction without exposing any of the internal financial data.
+          </p>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="mailto:info@bloomingacademies.org">Request Information</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <img src="baf-logo.jpg" alt="Blooming Academies Foundation" style="width:80px; height:80px; object-fit:contain; margin-bottom:14px; border-radius:16px; filter:drop-shadow(0 4px 12px rgba(46,139,87,0.25));">
+          <h4>Blooming Academies Foundation</h4>
+          <p style="font-style:italic; color:var(--gold-bright); margin-bottom:8px;">"Where every student is a SEED"</p>
+          <p>
+            A Florida-based school network vision centered on academic rigor, wraparound support, and expansion-ready educational design. Est. 2025.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>Schools</h4>
+          <div class="footer-links">
+            <a href="#palm-beach">Palm Beach (BAF)</a>
+            <a href="#broward">Broward Campus</a>
+            <a href="#tampa">Tampa Campus</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="#model">Programs & Services</a>
+            <a href="#outcomes">Student Outcomes</a>
+            <a href="#partners">Partnerships</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <p>
+            Replace this placeholder with BAF's preferred website email, phone, application link, or contact workflow when ready.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Blooming Academies Foundation. All rights reserved.</span>
+        <span>Built as a school network overview for BAF.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-cta" href="#contact">Request Information</a>
+</body>
+</html>
