@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions - International Campus | Blooming Academies Foundation</title>
+  <meta name="description" content="Blooming Academies Foundation International Campus - Coming Soon. Register your interest to receive updates on our global expansion plans.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand">
+        <div class="brand-mark"><img src="baf-logo.jpg" alt="BAF Logo"></div>
+        <div class="brand-copy"><strong>Blooming Academies</strong><small>Foundation</small></div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="student-life.html">Student Life</a>
+        <a href="services.html">K-12 Services</a>
+        <a href="clinical.html">Clinical Services</a>
+        <a href="schools.html">Schools</a>
+        <a href="admissions.html" class="active">Admissions</a>
+      </div>
+      <a class="btn btn-primary" href="#contact-form">Register Interest</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Admissions</div>
+      <h1 style="margin-top:20px;">International Campus</h1>
+      <p>Taking our mission global — expanding specialized education and clinical services beyond Florida's borders.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="card" style="padding:32px; max-width:900px;">
+        <h3>About International Campus</h3>
+        <p style="margin-top:12px; line-height:1.8;">Blooming Academies Foundation has set its sights on global expansion, bringing our interdisciplinary educational model to international communities. Our vision is to replicate the success of our Florida campuses on a global scale, adapting our K-12 programs and integrated clinical services to serve diverse populations worldwide while maintaining the high standards that define our foundation.</p>
+        <div style="margin-top:20px; padding:18px; border-radius:14px; background:rgba(255,193,7,0.1); border:1px solid rgba(255,193,7,0.25);">
+          <strong style="color:#ffc107;">Coming Soon</strong>
+          <p style="margin-top:8px;">This campus is currently in planning. Submit your information below to receive updates and be first to know when enrollment opens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact-form">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Stay Updated</div>
+        <h2 style="margin-top:14px;">Register Your Interest</h2>
+        <p>Fill out the form below to receive updates about our International Campus plans.</p>
+      </div>
+
+      <div class="card" style="padding:32px; max-width:700px;">
+        <form action="https://formsubmit.co/info@bloomingacademies.org" method="POST" style="display:grid; gap:16px;">
+          <input type="hidden" name="_subject" value="BAF Admissions Inquiry - International Campus">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="grid-2">
+            <div>
+              <label style="display:block; font-weight:700; margin-bottom:6px; font-size:14px;">First Name</label>
+              <input type="text" name="first_name" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text); font-family:inherit; font-size:15px;">
+            </div>
+            <div>
+              <label style="display:block; font-weight:700; margin-bottom:6px; font-size:14px;">Last Name</label>
+              <input type="text" name="last_name" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text); font-family:inherit; font-size:15px;">
+            </div>
+          </div>
+          <div>
+            <label style="display:block; font-weight:700; margin-bottom:6px; font-size:14px;">Email</label>
+            <input type="email" name="email" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text); font-family:inherit; font-size:15px;">
+          </div>
+          <div>
+            <label style="display:block; font-weight:700; margin-bottom:6px; font-size:14px;">Phone Number</label>
+            <input type="tel" name="phone" placeholder="(555) 123-4567" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text); font-family:inherit; font-size:15px;">
+          </div>
+          <div>
+            <label style="display:block; font-weight:700; margin-bottom:6px; font-size:14px;">Student Grade Level</label>
+            <select name="grade_level" required style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text); font-family:inherit; font-size:15px;">
+              <option value="">Select grade level</option>
+              <option value="K">Kindergarten</option>
+              <option value="1">Grade 1</option>
+              <option value="2">Grade 2</option>
+              <option value="3">Grade 3</option>
+              <option value="4">Grade 4</option>
+              <option value="5">Grade 5</option>
+              <option value="6">Grade 6</option>
+              <option value="7">Grade 7</option>
+              <option value="8">Grade 8</option>
+              <option value="9">Grade 9</option>
+              <option value="10">Grade 10</option>
+              <option value="11">Grade 11</option>
+              <option value="12">Grade 12</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; font-weight:700; margin-bottom:6px; font-size:14px;">Message</label>
+            <textarea name="message" rows="5" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text); font-family:inherit; font-size:15px; resize:vertical;" placeholder="Tell us about your interest in the International Campus..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:fit-content;">Submit Interest</button>
+        </form>
+      </div>
+
+      <div class="contact-bar" style="margin-top:20px;">
+        <span><strong>Address:</strong> 125 S. State Rd 7, Wellington, FL 33414</span>
+        <span><strong>Email:</strong> info@bloomingacademies.org</span>
+        <span><strong>Phone:</strong> (728) 231-2718</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <img src="baf-logo.jpg" alt="BAF" style="width:60px; height:60px; object-fit:contain; margin-bottom:14px; border-radius:14px;">
+          <h4>Blooming Academies Foundation</h4>
+          <p style="font-style:italic; color:var(--green-bright); margin-bottom:8px;">"Where every student is a SEED"</p>
+          <p>A registered 501(c)(3) nonprofit organization dedicated to student success in Florida.</p>
+        </div>
+        <div class="footer-column"><h4>Navigate</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="leadership.html">Leadership</a><a href="student-life.html">Student Life</a></div></div>
+        <div class="footer-column"><h4>Programs</h4><div class="footer-links"><a href="services.html">K-12 Educational Services</a><a href="clinical.html">Clinical Services</a><a href="schools.html">Schools</a><a href="admissions.html">Admissions</a></div></div>
+        <div class="footer-column"><h4>Contact</h4><p>125 S. State Rd 7, Wellington, FL 33414</p><p style="margin-top:8px;">info@bloomingacademies.org</p><p style="margin-top:4px;">(728) 231-2718</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Blooming Academies Foundation. All rights reserved.</span><span>Cultivating tomorrow's Florida leaders.</span></div>
+    </div>
+  </footer>
+
+  <div class="slide-overlay" onclick="toggleMenu()"></div>
+  <nav class="slide-menu">
+    <div class="slide-menu-section">
+      <span class="slide-menu-label">Pages</span>
+      <div class="slide-menu-links" id="menu-pages">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="leadership.html">Executive Leadership</a>
+        <a href="student-life.html">Student Life</a>
+        <a href="services.html">K-12 Educational Services</a>
+        <a href="clinical.html">Clinical Services</a>
+        <a href="schools.html">Schools</a>
+        <a href="admissions.html">Admissions</a>
+      </div>
+    </div>
+    <div class="slide-menu-divider"></div>
+    <div class="slide-menu-section">
+      <span class="slide-menu-label">Quick Links</span>
+      <div class="slide-menu-links">
+        <a href="https://www.paypal.com/donate" target="_blank">Donate Now</a>
+        <a href="mailto:info@bloomingacademies.org">Email Us</a>
+        <a href="tel:+17282312718">Call (728) 231-2718</a>
+      </div>
+    </div>
+    <div class="slide-menu-divider"></div>
+    <div class="slide-menu-section">
+      <span class="slide-menu-label">Address</span>
+      <div class="slide-menu-links">
+        <span style="padding:10px 14px; color:var(--muted); font-size:14px; line-height:1.6;">125 S. State Rd 7<br>Wellington, FL 33414</span>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+  function toggleMenu(){
+    document.querySelector('.menu-toggle').classList.toggle('open');
+    document.querySelector('.slide-menu').classList.toggle('open');
+    document.querySelector('.slide-overlay').classList.toggle('open');
+  }
+  (function(){
+    var path=location.pathname.split('/').pop()||'index.html';
+    document.querySelectorAll('#menu-pages a').forEach(function(a){
+      if(a.getAttribute('href')===path) a.classList.add('active');
+    });
+  })();
+  </script>
+
+</body>
+</html>
